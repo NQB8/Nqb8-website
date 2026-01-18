@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/images/nqb8-icon-logo.png" alt="Logo" className="h-8 w-auto" />
+              <img src="/images/nqb8-icon-logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto" />
               <span className="text-white font-medium text-lg">NQB8</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-md">
@@ -67,10 +67,10 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Services</p>
           <div className="flex gap-6 text-xs">
-            <a href="#" className="text-white/40 hover:text-white transition-colors">
+            <a href="/privacy" className="text-white/40 hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/40 hover:text-white transition-colors">
+            <a href="/terms" className="text-white/40 hover:text-white transition-colors">
               Terms of Service
             </a>
           </div>
