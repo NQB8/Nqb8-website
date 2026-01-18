@@ -5,22 +5,22 @@ import { Code2, Palette, Rocket, Sparkles } from "lucide-react"
 export default function ServicesSection() {
   const services = [
     {
-      icon: <Code2 className="w-8 h-8" />,
+      icon: <Code2 className="w-8 h-8" aria-hidden="true" />,
       title: "Custom Development",
       description: "Tailored web and mobile applications built with modern technologies and best practices.",
     },
     {
-      icon: <Palette className="w-8 h-8" />,
+      icon: <Palette className="w-8 h-8" aria-hidden="true" />,
       title: "UI/UX Design",
       description: "Beautiful, intuitive interfaces that delight users and drive engagement.",
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8" aria-hidden="true" />,
       title: "Product Strategy",
       description: "From concept to launch, we help shape and refine your digital product vision.",
     },
     {
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className="w-8 h-8" aria-hidden="true" />,
       title: "Brand Experience",
       description: "Cohesive digital experiences that reflect your unique brand identity.",
     },
