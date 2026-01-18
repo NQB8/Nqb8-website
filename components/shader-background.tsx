@@ -77,7 +77,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       />
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="/images/nqb8-icon-logo.png" alt="" className="h-96 w-auto opacity-10 mix-blend-screen" />
+        <img src="/images/nqb8-icon-logo.png" alt="" width={384} height={384} className="h-96 w-auto opacity-10 mix-blend-screen" />
       </div>
 
       {children}
