@@ -5,6 +5,13 @@ import { motion, AnimatePresence } from "framer-motion"
 import Menu from "lucide-react/dist/esm/icons/menu"
 import X from "lucide-react/dist/esm/icons/x"
 
+const navLinks = [
+  { name: "Services", href: "#services" },
+  { name: "Process", href: "#process" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Contact", href: "#contact" },
+]
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -31,13 +38,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Process", href: "#process" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
-  ]
 
   return (
     <>
