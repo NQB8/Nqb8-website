@@ -49,7 +49,7 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center">
-          <img src="/images/nqb8-icon-logo.png" alt="Logo" className="h-10 w-auto" />
+          <img src="/images/nqb8-icon-logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto" />
         </div>
 
         <nav className="hidden md:flex items-center space-x-2">
@@ -78,8 +78,8 @@ export default function Header() {
           className="hidden md:flex relative items-center group"
           style={{ filter: "url(#gooey-filter)" }}
         >
-          <button className="absolute right-0 px-2.5 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center justify-center -translate-x-10 group-hover:-translate-x-19 z-0">
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="absolute right-0 px-2.5 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center justify-center -translate-x-10 group-hover:-translate-x-19 z-0" aria-label="Go to login">
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </button>
@@ -92,13 +92,14 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            <motion.div
+            <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden cursor-default"
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
             />
             <motion.div
               initial={{ x: "100%" }}
@@ -109,7 +110,7 @@ export default function Header() {
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex items-center justify-between mb-12">
-                  <img src="/images/nqb8-icon-logo.png" alt="Logo" className="h-10 w-auto" />
+                  <img src="/images/nqb8-icon-logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto" />
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="p-2 text-white/80 hover:text-white transition-colors"
