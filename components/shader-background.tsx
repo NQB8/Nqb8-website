@@ -40,19 +40,20 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       </svg>
 
       {/* Background Shaders - Logo-inspired colors */}
-      <MeshGradient
-        className="absolute inset-0 w-full h-full"
-        colors={["#FF5733", "#FFC300", "#28B463", "#1F8DD6", "#9B59B6"]}
-        speed={0.3}
-        backgroundColor="#0a0a0a"
-      />
-      <MeshGradient
-        className="absolute inset-0 w-full h-full opacity-50"
-        colors={["#FF6B4A", "#F4D03F", "#17A589", "#2874A6", "#A93F8F"]}
-        speed={0.2}
-        wireframe="true"
-        backgroundColor="transparent"
-      />
+      <div className="absolute inset-0 bg-[#0a0a0a]">
+        <MeshGradient
+          className="w-full h-full"
+          colors={["#FF5733", "#FFC300", "#28B463", "#1F8DD6", "#9B59B6"]}
+          speed={0.3}
+        />
+      </div>
+      <div className="absolute inset-0 opacity-50 mix-blend-overlay">
+        <MeshGradient
+          className="w-full h-full"
+          colors={["#FF6B4A", "#F4D03F", "#17A589", "#2874A6", "#A93F8F"]}
+          speed={0.2}
+        />
+      </div>
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <img src="/images/nqb8-icon-logo.png" alt="" width={384} height={384} className="h-96 w-auto opacity-10 mix-blend-screen" />
