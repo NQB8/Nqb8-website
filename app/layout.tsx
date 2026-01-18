@@ -38,8 +38,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: "dark" }}>
       <head>
+        <meta name="theme-color" content="#0a0a0a" />
         <style>{`
 html {
   font-family: ${figtree.style.fontFamily};
