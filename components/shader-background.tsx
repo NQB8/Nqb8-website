@@ -51,6 +51,13 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       pane = new Pane({ title: "Shader Tweaks" })
       paneRef.current = pane
 
+      // Ensure tweakpane is clickable above all other elements
+      const container = pane.element.parentElement
+      if (container) {
+        container.style.zIndex = "9999"
+        container.style.position = "fixed"
+      }
+
       const folder1 = pane.addFolder({ title: "Layer 1 Colors" })
       folder1.addBinding(params, "color1_1", { label: "Color 1" }).on("change", (e) => setColors1((c) => [e.value, c[1], c[2], c[3], c[4]]))
       folder1.addBinding(params, "color1_2", { label: "Color 2" }).on("change", (e) => setColors1((c) => [c[0], e.value, c[2], c[3], c[4]]))
