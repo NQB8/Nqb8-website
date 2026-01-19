@@ -2,12 +2,16 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
+import type { Pane } from "tweakpane"
 
 import { MeshGradient } from "@paper-design/shaders-react"
 
 interface ShaderBackgroundProps {
   children: React.ReactNode
 }
+
+// Set to true to show tweakpane debug panel in development
+const SHOW_TWEAKPANE = true
 
 // Default colors - tweak these or use the debug panel
 const DEFAULT_COLORS_1 = ["#FF5733", "#FFC300", "#28B463", "#1F8DD6", "#9B59B6"]
@@ -25,13 +29,13 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   const rafIdRef = useRef<number>(0)
   const paneRef = useRef<unknown>(null)
 
-  // Tweakpane debug panel (dev only)
+  // Tweakpane debug panel (dev only, controlled by SHOW_TWEAKPANE)
   useEffect(() => {
-    if (process.env.NODE_ENV !== "development") return
+    if (process.env.NODE_ENV !== "development" || !SHOW_TWEAKPANE) return
 
-    let pane: { dispose: () => void } | null = null
+    let pane: Pane | null = null
 
-    import("tweakpane").then(({ Pane }) => {
+    import("tweakpane").then(({ Pane: TweakPane }) => {
       const params = {
         color1_1: colors1[0],
         color1_2: colors1[1],
@@ -48,7 +52,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         saturation,
       }
 
-      pane = new Pane({ title: "Shader Tweaks" })
+      pane = new TweakPane({ title: "Shader Tweaks" })
       paneRef.current = pane
 
       // Ensure tweakpane is clickable above all other elements
@@ -59,23 +63,23 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       }
 
       const folder1 = pane.addFolder({ title: "Layer 1 Colors" })
-      folder1.addBinding(params, "color1_1", { label: "Color 1" }).on("change", (e) => setColors1((c) => [e.value, c[1], c[2], c[3], c[4]]))
-      folder1.addBinding(params, "color1_2", { label: "Color 2" }).on("change", (e) => setColors1((c) => [c[0], e.value, c[2], c[3], c[4]]))
-      folder1.addBinding(params, "color1_3", { label: "Color 3" }).on("change", (e) => setColors1((c) => [c[0], c[1], e.value, c[3], c[4]]))
-      folder1.addBinding(params, "color1_4", { label: "Color 4" }).on("change", (e) => setColors1((c) => [c[0], c[1], c[2], e.value, c[4]]))
-      folder1.addBinding(params, "color1_5", { label: "Color 5" }).on("change", (e) => setColors1((c) => [c[0], c[1], c[2], c[3], e.value]))
+      folder1.addBinding(params, "color1_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors1((c) => [e.value, c[1], c[2], c[3], c[4]]))
+      folder1.addBinding(params, "color1_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], e.value, c[2], c[3], c[4]]))
+      folder1.addBinding(params, "color1_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], e.value, c[3], c[4]]))
+      folder1.addBinding(params, "color1_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], c[2], e.value, c[4]]))
+      folder1.addBinding(params, "color1_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], c[2], c[3], e.value]))
 
       const folder2 = pane.addFolder({ title: "Layer 2 Colors" })
-      folder2.addBinding(params, "color2_1", { label: "Color 1" }).on("change", (e) => setColors2((c) => [e.value, c[1], c[2], c[3], c[4]]))
-      folder2.addBinding(params, "color2_2", { label: "Color 2" }).on("change", (e) => setColors2((c) => [c[0], e.value, c[2], c[3], c[4]]))
-      folder2.addBinding(params, "color2_3", { label: "Color 3" }).on("change", (e) => setColors2((c) => [c[0], c[1], e.value, c[3], c[4]]))
-      folder2.addBinding(params, "color2_4", { label: "Color 4" }).on("change", (e) => setColors2((c) => [c[0], c[1], c[2], e.value, c[4]]))
-      folder2.addBinding(params, "color2_5", { label: "Color 5" }).on("change", (e) => setColors2((c) => [c[0], c[1], c[2], c[3], e.value]))
+      folder2.addBinding(params, "color2_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors2((c) => [e.value, c[1], c[2], c[3], c[4]]))
+      folder2.addBinding(params, "color2_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], e.value, c[2], c[3], c[4]]))
+      folder2.addBinding(params, "color2_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], e.value, c[3], c[4]]))
+      folder2.addBinding(params, "color2_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], c[2], e.value, c[4]]))
+      folder2.addBinding(params, "color2_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], c[2], c[3], e.value]))
 
       const effects = pane.addFolder({ title: "Effects" })
-      effects.addBinding(params, "layer2Opacity", { label: "Layer 2 Opacity", min: 0, max: 1 }).on("change", (e) => setLayer2Opacity(e.value))
-      effects.addBinding(params, "brightness", { label: "Brightness", min: 0, max: 2 }).on("change", (e) => setBrightness(e.value))
-      effects.addBinding(params, "saturation", { label: "Saturation", min: 0, max: 2 }).on("change", (e) => setSaturation(e.value))
+      effects.addBinding(params, "layer2Opacity", { label: "Layer 2 Opacity", min: 0, max: 1 }).on("change", (e: { value: number }) => setLayer2Opacity(e.value))
+      effects.addBinding(params, "brightness", { label: "Brightness", min: 0, max: 2 }).on("change", (e: { value: number }) => setBrightness(e.value))
+      effects.addBinding(params, "saturation", { label: "Saturation", min: 0, max: 2 }).on("change", (e: { value: number }) => setSaturation(e.value))
 
       // Log current values button
       pane.addButton({ title: "Log Current Values" }).on("click", () => {
