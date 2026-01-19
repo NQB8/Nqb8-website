@@ -75,7 +75,7 @@ export default function Header() {
 
         {/* Desktop CTA Button */}
         <a
-          href="#contact"
+          href="mailto:hello@nqb8.tech?subject=Project%20Inquiry"
           className="hidden md:flex px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 items-center"
         >
           Get in Touch
@@ -131,7 +131,7 @@ export default function Header() {
 
                 <div className="mt-auto">
                   <a
-                    href="#contact"
+                    href="mailto:hello@nqb8.tech?subject=Project%20Inquiry"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block w-full px-6 py-3 rounded-full bg-white text-black font-normal text-sm text-center transition-all duration-200 hover:bg-white/90 cursor-pointer"
                   >
