@@ -16,31 +16,33 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   const rafIdRef = useRef<number>(0)
 
   useEffect(() => {
-    const FPS_THRESHOLD = 55 // Pause below this
-    const FPS_RESUME_THRESHOLD = 58 // Resume above this (hysteresis)
-    const SAMPLE_SIZE = 30 // Number of frames to average
+    const FPS_THRESHOLD = 55
+    const SAMPLE_SIZE = 30
+
+    let paused = false
 
     const measureFPS = () => {
+      // Stop monitoring once paused - never resume
+      if (paused) return
+
       const now = performance.now()
       const delta = now - lastFrameTimeRef.current
       lastFrameTimeRef.current = now
 
-      // Track frame times
       frameTimesRef.current.push(delta)
       if (frameTimesRef.current.length > SAMPLE_SIZE) {
         frameTimesRef.current.shift()
       }
 
-      // Calculate average FPS once we have enough samples
       if (frameTimesRef.current.length === SAMPLE_SIZE) {
         const avgFrameTime = frameTimesRef.current.reduce((a, b) => a + b, 0) / SAMPLE_SIZE
         const fps = 1000 / avgFrameTime
 
-        setIsPaused((paused) => {
-          if (!paused && fps < FPS_THRESHOLD) return true
-          if (paused && fps > FPS_RESUME_THRESHOLD) return false
-          return paused
-        })
+        if (fps < FPS_THRESHOLD) {
+          paused = true
+          setIsPaused(true)
+          return // Stop monitoring
+        }
       }
 
       rafIdRef.current = requestAnimationFrame(measureFPS)
