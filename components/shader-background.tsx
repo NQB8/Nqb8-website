@@ -2,7 +2,8 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import type { Pane } from "tweakpane"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TweakpaneInstance = any
 
 import { MeshGradient } from "@paper-design/shaders-react"
 
@@ -33,7 +34,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   useEffect(() => {
     if (process.env.NODE_ENV !== "development" || !SHOW_TWEAKPANE) return
 
-    let pane: Pane | null = null
+    let pane: TweakpaneInstance = null
 
     import("tweakpane").then(({ Pane: TweakPane }) => {
       const params = {
@@ -63,18 +64,18 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       }
 
       const folder1 = pane.addFolder({ title: "Layer 1 Colors" })
-      folder1.addBinding(params, "color1_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors1((c) => [e.value, c[1], c[2], c[3], c[4]]))
-      folder1.addBinding(params, "color1_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], e.value, c[2], c[3], c[4]]))
-      folder1.addBinding(params, "color1_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], e.value, c[3], c[4]]))
-      folder1.addBinding(params, "color1_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], c[2], e.value, c[4]]))
-      folder1.addBinding(params, "color1_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors1((c) => [c[0], c[1], c[2], c[3], e.value]))
+      folder1.addBinding(params, "color1_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors1(c => [e.value, c[1], c[2], c[3], c[4]]))
+      folder1.addBinding(params, "color1_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors1(c => [c[0], e.value, c[2], c[3], c[4]]))
+      folder1.addBinding(params, "color1_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors1(c => [c[0], c[1], e.value, c[3], c[4]]))
+      folder1.addBinding(params, "color1_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors1(c => [c[0], c[1], c[2], e.value, c[4]]))
+      folder1.addBinding(params, "color1_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors1(c => [c[0], c[1], c[2], c[3], e.value]))
 
       const folder2 = pane.addFolder({ title: "Layer 2 Colors" })
-      folder2.addBinding(params, "color2_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors2((c) => [e.value, c[1], c[2], c[3], c[4]]))
-      folder2.addBinding(params, "color2_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], e.value, c[2], c[3], c[4]]))
-      folder2.addBinding(params, "color2_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], e.value, c[3], c[4]]))
-      folder2.addBinding(params, "color2_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], c[2], e.value, c[4]]))
-      folder2.addBinding(params, "color2_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors2((c) => [c[0], c[1], c[2], c[3], e.value]))
+      folder2.addBinding(params, "color2_1", { label: "Color 1" }).on("change", (e: { value: string }) => setColors2(c => [e.value, c[1], c[2], c[3], c[4]]))
+      folder2.addBinding(params, "color2_2", { label: "Color 2" }).on("change", (e: { value: string }) => setColors2(c => [c[0], e.value, c[2], c[3], c[4]]))
+      folder2.addBinding(params, "color2_3", { label: "Color 3" }).on("change", (e: { value: string }) => setColors2(c => [c[0], c[1], e.value, c[3], c[4]]))
+      folder2.addBinding(params, "color2_4", { label: "Color 4" }).on("change", (e: { value: string }) => setColors2(c => [c[0], c[1], c[2], e.value, c[4]]))
+      folder2.addBinding(params, "color2_5", { label: "Color 5" }).on("change", (e: { value: string }) => setColors2(c => [c[0], c[1], c[2], c[3], e.value]))
 
       const effects = pane.addFolder({ title: "Effects" })
       effects.addBinding(params, "layer2Opacity", { label: "Layer 2 Opacity", min: 0, max: 1 }).on("change", (e: { value: number }) => setLayer2Opacity(e.value))
