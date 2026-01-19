@@ -22,8 +22,8 @@ export default function HeroContent() {
           </h1>
 
           <p className="text-base font-light text-white/70 mb-4 leading-relaxed max-w-xl">
-            We build fast, reliable web and mobile apps for startups and SMEs—designed to launch quickly, scale
-            smoothly, and convert users into customers.
+            We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and
+            convert users into customers.
           </p>
 
           <p className="text-sm font-light text-white/50 mb-8 leading-relaxed max-w-xl">
@@ -34,8 +34,8 @@ export default function HeroContent() {
             <a href="#portfolio" className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
               View Our Work
             </a>
-            <a href="#contact" className="px-8 py-3 rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-              Get a Free Consultation
+            <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="px-8 py-3 rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+              Get in Touch
             </a>
           </div>
         </div>
