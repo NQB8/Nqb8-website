@@ -3,19 +3,19 @@
 export default function PortfolioSection() {
   const projects = [
     {
-      title: "SaaS Dashboard",
-      category: "Concept Project",
-      description: "A metrics dashboard concept demonstrating real-time data visualization and responsive design patterns.",
+      title: "Lupa't Bahay",
+      category: "Real Estate Platform",
+      description: "A property listing and search platform for the Philippine market—featuring advanced filters, map integration, and agent dashboards for seamless buyer-seller connections.",
     },
     {
-      title: "Booking Platform",
-      category: "Concept Project",
-      description: "An appointment scheduling system prototype showcasing calendar integration and user flow optimization.",
+      title: "SellerBoost",
+      category: "In Development",
+      description: "A social commerce management system for online sellers—consolidating orders, chats, and inventory across Facebook, Instagram, and messaging apps into one streamlined dashboard.",
     },
     {
-      title: "Portfolio Template",
-      category: "Concept Project",
-      description: "A modern portfolio design exploring animation techniques and performance-focused development.",
+      title: "NQB8 Website",
+      category: "Brand Experience",
+      description: "Our own site, built with Next.js and WebGL shaders—demonstrating performance optimization, smooth animations, and modern design principles.",
     },
   ]
 
@@ -24,9 +24,9 @@ export default function PortfolioSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Sample <span className="font-medium italic instrument">Work</span>
+            Featured <span className="font-medium italic instrument">Work</span>
           </h2>
-          <p className="text-white/60 text-sm max-w-2xl mx-auto">Concept projects that demonstrate our approach and capabilities</p>
+          <p className="text-white/60 text-sm max-w-2xl mx-auto">Projects we're building and products that showcase our capabilities</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
