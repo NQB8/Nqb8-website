@@ -5,7 +5,7 @@ export default function ProcessSection() {
     {
       number: "01",
       title: "Discovery",
-      description: "We start with a call to understand your goals, users, and constraints. Together we define what success looks like before any code is written.",
+      description: "You email us about your project. We reply within 24 hours with questions to understand your goals, users, and constraints—then schedule a call to align on scope.",
     },
     {
       number: "02",
