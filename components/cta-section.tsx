@@ -8,16 +8,11 @@ export default function CTASection() {
           Let's Talk About Your <span className="font-medium italic instrument">Project</span>
         </h2>
         <p className="text-white/60 text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-          Tell us what you're building and we'll reply within 24 hours with next steps and a free consultation.
+          Tell us what you're building and we'll reply within 24 hours with next steps.
         </p>
-        <div className="flex items-center justify-center gap-4 flex-wrap">
-          <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="px-10 py-4 rounded-full bg-white text-black font-medium text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-            Describe Your Project
-          </a>
-          <a href="mailto:hello@nqb8.tech?subject=Book%20a%20Call" className="px-10 py-4 rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-            Book a Free Call
-          </a>
-        </div>
+        <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="inline-block px-10 py-4 rounded-full bg-white text-black font-medium text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+          Send Us an Email
+        </a>
       </div>
     </section>
   )
