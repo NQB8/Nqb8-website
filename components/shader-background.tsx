@@ -16,14 +16,16 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   const rafIdRef = useRef<number>(0)
 
   useEffect(() => {
-    const FPS_THRESHOLD = 55
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    const PAUSE_THRESHOLD = 55 // Pause below this
+    const RESUME_THRESHOLD = 58 // Resume above this (desktop only)
+    const PERMANENT_PAUSE_THRESHOLD = 22 // Never resume below this
     const SAMPLE_SIZE = 30
 
-    let paused = false
+    let permanentlyPaused = false
 
     const measureFPS = () => {
-      // Stop monitoring once paused - never resume
-      if (paused) return
+      if (permanentlyPaused) return
 
       const now = performance.now()
       const delta = now - lastFrameTimeRef.current
@@ -38,10 +40,20 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         const avgFrameTime = frameTimesRef.current.reduce((a, b) => a + b, 0) / SAMPLE_SIZE
         const fps = 1000 / avgFrameTime
 
-        if (fps < FPS_THRESHOLD) {
-          paused = true
+        // Permanently pause on very low FPS or any pause on mobile
+        if (fps < PERMANENT_PAUSE_THRESHOLD || (isMobile && fps < PAUSE_THRESHOLD)) {
+          permanentlyPaused = true
           setIsPaused(true)
-          return // Stop monitoring
+          return
+        }
+
+        // Desktop: allow resume with hysteresis
+        if (!isMobile) {
+          setIsPaused((paused) => {
+            if (!paused && fps < PAUSE_THRESHOLD) return true
+            if (paused && fps > RESUME_THRESHOLD) return false
+            return paused
+          })
         }
       }
 
