@@ -3,19 +3,19 @@
 export default function PortfolioSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      category: "Web Development",
-      description: "Custom headless commerce solution with seamless checkout experience",
+      title: "SaaS Dashboard",
+      category: "Concept Project",
+      description: "A metrics dashboard concept demonstrating real-time data visualization and responsive design patterns.",
     },
     {
-      title: "Healthcare App",
-      category: "Mobile & Web",
-      description: "HIPAA-compliant patient management system with real-time updates",
+      title: "Booking Platform",
+      category: "Concept Project",
+      description: "An appointment scheduling system prototype showcasing calendar integration and user flow optimization.",
     },
     {
-      title: "Creative Studio",
-      category: "Brand & Web",
-      description: "Portfolio showcase with immersive animations and bold typography",
+      title: "Portfolio Template",
+      category: "Concept Project",
+      description: "A modern portfolio design exploring animation techniques and performance-focused development.",
     },
   ]
 
@@ -24,9 +24,9 @@ export default function PortfolioSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Featured <span className="font-medium italic instrument">Work</span>
+            Sample <span className="font-medium italic instrument">Work</span>
           </h2>
-          <p className="text-white/60 text-sm max-w-2xl mx-auto">A selection of projects we've brought to life</p>
+          <p className="text-white/60 text-sm max-w-2xl mx-auto">Concept projects that demonstrate our approach and capabilities</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -45,11 +45,6 @@ export default function PortfolioSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-xs transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-            View All Projects
-          </button>
-        </div>
       </div>
     </section>
   )

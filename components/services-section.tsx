@@ -1,28 +1,31 @@
 "use client"
 
-import { Code2, Palette, Rocket, Sparkles } from "lucide-react"
+import Code2 from "lucide-react/dist/esm/icons/code-2"
+import Palette from "lucide-react/dist/esm/icons/palette"
+import Rocket from "lucide-react/dist/esm/icons/rocket"
+import Sparkles from "lucide-react/dist/esm/icons/sparkles"
 
 export default function ServicesSection() {
   const services = [
     {
       icon: <Code2 className="w-8 h-8" aria-hidden="true" />,
       title: "Custom Development",
-      description: "Tailored web and mobile applications built with modern technologies and best practices.",
+      description: "SaaS platforms, admin dashboards, internal tools, and marketing websites—built with modern tech stacks that scale.",
     },
     {
       icon: <Palette className="w-8 h-8" aria-hidden="true" />,
       title: "UI/UX Design",
-      description: "Beautiful, intuitive interfaces that delight users and drive engagement.",
+      description: "Wireframes, prototypes, and polished interfaces designed around your users' needs—not just aesthetics.",
     },
     {
       icon: <Rocket className="w-8 h-8" aria-hidden="true" />,
       title: "Product Strategy",
-      description: "From concept to launch, we help shape and refine your digital product vision.",
+      description: "MVP planning, feature prioritization, and roadmapping to help you launch the right thing at the right time.",
     },
     {
       icon: <Sparkles className="w-8 h-8" aria-hidden="true" />,
       title: "Brand Experience",
-      description: "Cohesive digital experiences that reflect your unique brand identity.",
+      description: "Websites and digital branding that communicate who you are clearly and consistently across every touchpoint.",
     },
   ]
 
@@ -31,10 +34,10 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-            What We <span className="font-medium italic instrument">Create</span>
+            What We <span className="font-medium italic instrument">Build</span>
           </h2>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            Comprehensive digital solutions tailored to bring your vision to life
+            End-to-end development services to take your idea from concept to production
           </p>
         </div>
 

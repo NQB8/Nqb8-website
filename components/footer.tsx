@@ -10,10 +10,16 @@ export default function Footer() {
               <img src="/images/nqb8-icon-logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto" />
               <span className="text-white font-medium text-lg">NQB8</span>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed max-w-md">
-              Premium software development services crafting exceptional digital experiences with attention to detail
-              and innovative design.
+            <p className="text-white/60 text-sm leading-relaxed max-w-md mb-4">
+              A focused team building modern software for startups and growing businesses. We ship fast, communicate
+              clearly, and build things that last.
             </p>
+            <div className="flex flex-col gap-2 text-sm">
+              <span className="text-white/40">Founded 2025</span>
+              <a href="mailto:hello@nqb8.tech" className="text-white/60 hover:text-white transition-colors">
+                hello@nqb8.tech
+              </a>
+            </div>
           </div>
 
           <div>
@@ -47,17 +53,17 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#portfolio" className="text-white/60 hover:text-white transition-colors">
-                  Portfolio
+                  Sample Work
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/60 hover:text-white transition-colors">
-                  About
+                <a href="#process" className="text-white/60 hover:text-white transition-colors">
+                  Our Process
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-white/60 hover:text-white transition-colors">
-                  Contact
+                  Get in Touch
                 </a>
               </li>
             </ul>

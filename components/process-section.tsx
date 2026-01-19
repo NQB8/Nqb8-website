@@ -5,22 +5,22 @@ export default function ProcessSection() {
     {
       number: "01",
       title: "Discovery",
-      description: "We dive deep into your goals, audience, and vision to understand what success looks like.",
+      description: "We start with a call to understand your goals, users, and constraints. Together we define what success looks like before any code is written.",
     },
     {
       number: "02",
       title: "Design",
-      description: "Crafting beautiful, user-centered designs that align with your brand and objectives.",
+      description: "You'll see clickable prototypes and wireframes before development begins—so you can test ideas early and avoid costly changes later.",
     },
     {
       number: "03",
       title: "Development",
-      description: "Building robust, scalable solutions with clean code and modern technologies.",
+      description: "We build in short cycles with weekly updates and demos. You'll always know what's happening and can give feedback along the way.",
     },
     {
       number: "04",
       title: "Launch",
-      description: "Deploying your product with confidence and providing ongoing support as you grow.",
+      description: "We handle deployment, monitoring, and provide post-launch support to make sure everything runs smoothly after go-live.",
     },
   ]
 
@@ -29,10 +29,10 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Our <span className="font-medium italic instrument">Process</span>
+            How We <span className="font-medium italic instrument">Work</span>
           </h2>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            A streamlined approach to turning ideas into reality
+            A transparent process designed to keep you informed and in control
           </p>
         </div>
 

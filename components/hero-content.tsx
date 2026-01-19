@@ -12,27 +12,31 @@ export default function HeroContent() {
             }}
           >
             <div className="absolute top-0 left-1 right-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full" />
-            <span className="text-white/90 text-xs font-light relative z-10">✨ Premium Development Experience</span>
+            <span className="text-white/90 text-xs font-light relative z-10">Software for Growing Businesses</span>
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl md:leading-[1.1] tracking-tight font-light text-white mb-6">
-            <span className="font-medium italic instrument">Crafted</span> Software
+            <span className="font-medium italic instrument">Build</span> Software
             <br />
-            <span className="font-light tracking-tight text-white">Solutions</span>
+            <span className="font-light tracking-tight text-white">That Scales</span>
           </h1>
 
-          <p className="text-base font-light text-white/70 mb-8 leading-relaxed max-w-xl">
-            Custom software development services tailored to your vision. We create bespoke digital experiences with
-            attention to detail, innovative design, and cutting-edge technology.
+          <p className="text-base font-light text-white/70 mb-4 leading-relaxed max-w-xl">
+            We build fast, reliable web and mobile apps for startups and SMEs—designed to launch quickly, scale
+            smoothly, and convert users into customers.
+          </p>
+
+          <p className="text-sm font-light text-white/50 mb-8 leading-relaxed max-w-xl">
+            Clear communication. Weekly updates. No surprises.
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
-            <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-              Our Work
-            </button>
-            <button className="px-8 py-3 rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
-              Get Started
-            </button>
+            <a href="#portfolio" className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+              View Our Work
+            </a>
+            <a href="#contact" className="px-8 py-3 rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+              Get a Free Consultation
+            </a>
           </div>
         </div>
       </div>
