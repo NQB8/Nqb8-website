@@ -1,24 +1,22 @@
-"use client"
+const projects = [
+  {
+    title: "Lupa't Bahay",
+    category: "Real Estate Platform",
+    description: "A property listing and search platform for the Philippine market—featuring advanced filters, map integration, and agent dashboards for seamless buyer-seller connections.",
+  },
+  {
+    title: "SellerBoost",
+    category: "In Development",
+    description: "A social commerce management system for online sellers—consolidating orders, chats, and inventory across Facebook, Instagram, and messaging apps into one streamlined dashboard.",
+  },
+  {
+    title: "NQB8 Website",
+    category: "Brand Experience",
+    description: "Our own site, built with Next.js and WebGL shaders—demonstrating performance optimization, smooth animations, and modern design principles.",
+  },
+]
 
 export default function PortfolioSection() {
-  const projects = [
-    {
-      title: "Lupa't Bahay",
-      category: "Real Estate Platform",
-      description: "A property listing and search platform for the Philippine market—featuring advanced filters, map integration, and agent dashboards for seamless buyer-seller connections.",
-    },
-    {
-      title: "SellerBoost",
-      category: "In Development",
-      description: "A social commerce management system for online sellers—consolidating orders, chats, and inventory across Facebook, Instagram, and messaging apps into one streamlined dashboard.",
-    },
-    {
-      title: "NQB8 Website",
-      category: "Brand Experience",
-      description: "Our own site, built with Next.js and WebGL shaders—demonstrating performance optimization, smooth animations, and modern design principles.",
-    },
-  ]
-
   return (
     <section className="relative z-20 py-24 px-8 bg-[#080808] border-t border-white/5" id="portfolio">
       <div className="max-w-7xl mx-auto">
@@ -30,9 +28,9 @@ export default function PortfolioSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
-              key={index}
+              key={project.title}
               className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5" />
