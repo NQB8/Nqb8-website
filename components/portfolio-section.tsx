@@ -33,7 +33,7 @@ export default function PortfolioSection() {
               key={project.title}
               className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5" />
+              <div className="aspect-4/3 bg-linear-to-br from-white/10 to-white/5" />
               <div className="p-6">
                 <div className="text-xs text-white/50 mb-2">{project.category}</div>
                 <h3 className="text-xl font-medium text-white mb-2">{project.title}</h3>

@@ -2,7 +2,7 @@
 
 export default function CTASection() {
   return (
-    <section className="relative z-20 py-32 px-8 bg-gradient-to-b from-[#080808] to-[#0a0a0a]" id="contact">
+    <section className="relative z-20 py-32 px-8 bg-linear-to-b from-[#080808] to-[#0a0a0a]" id="contact">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-5xl md:text-6xl font-light text-white mb-6 text-balance">
           Let's Talk About Your <span className="font-medium italic instrument">Project</span>
