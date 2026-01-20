@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/images/nqb8-icon-logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto" />
+              <img src="/images/nqb8-icon-logo.png" alt="NQB8 logo" width={32} height={32} className="h-8 w-auto" />
               <span className="text-white font-medium text-lg">NQB8</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-md mb-4">

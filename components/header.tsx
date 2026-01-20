@@ -50,7 +50,7 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center">
-          <img src="/images/nqb8-icon-logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto" />
+          <img src="/images/nqb8-icon-logo.png" alt="NQB8 logo" width={40} height={40} className="h-10 w-auto" />
         </div>
 
         <nav className="hidden md:flex items-center space-x-2">
@@ -103,7 +103,7 @@ export default function Header() {
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex items-center justify-between mb-12">
-                  <img src="/images/nqb8-icon-logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto" />
+                  <img src="/images/nqb8-icon-logo.png" alt="NQB8 logo" width={40} height={40} className="h-10 w-auto" />
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="p-2 text-white/80 hover:text-white transition-colors"
