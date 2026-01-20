@@ -53,7 +53,7 @@ export default function Header() {
           <img src="/images/nqb8-icon-logo.png" alt="NQB8 logo" width={40} height={40} className="h-10 w-auto" />
         </div>
 
-        <nav className="hidden md:flex items-center space-x-2">
+        <nav className="hidden md:flex items-center space-x-2" aria-label="Main navigation">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -119,7 +119,7 @@ export default function Header() {
                   </button>
                 </div>
 
-                <nav className="flex flex-col space-y-2 flex-1">
+                <nav className="flex flex-col space-y-2 flex-1" aria-label="Mobile navigation">
                   {navLinks.map((link, index) => (
                     <motion.a
                       key={link.name}
