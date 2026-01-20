@@ -1,29 +1,27 @@
-"use client"
+const steps = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "You email us about your project. We reply within 24 hours with questions to understand your goals, users, and constraints—then schedule a call to align on scope.",
+  },
+  {
+    number: "02",
+    title: "Design",
+    description: "You'll see clickable prototypes and wireframes before development begins—so you can test ideas early and avoid costly changes later.",
+  },
+  {
+    number: "03",
+    title: "Development",
+    description: "We build in short cycles with weekly updates and demos. You'll always know what's happening and can give feedback along the way.",
+  },
+  {
+    number: "04",
+    title: "Launch",
+    description: "We handle deployment, monitoring, and provide post-launch support to make sure everything runs smoothly after go-live.",
+  },
+]
 
 export default function ProcessSection() {
-  const steps = [
-    {
-      number: "01",
-      title: "Discovery",
-      description: "You email us about your project. We reply within 24 hours with questions to understand your goals, users, and constraints—then schedule a call to align on scope.",
-    },
-    {
-      number: "02",
-      title: "Design",
-      description: "You'll see clickable prototypes and wireframes before development begins—so you can test ideas early and avoid costly changes later.",
-    },
-    {
-      number: "03",
-      title: "Development",
-      description: "We build in short cycles with weekly updates and demos. You'll always know what's happening and can give feedback along the way.",
-    },
-    {
-      number: "04",
-      title: "Launch",
-      description: "We handle deployment, monitoring, and provide post-launch support to make sure everything runs smoothly after go-live.",
-    },
-  ]
-
   return (
     <section className="relative z-20 py-24 px-8 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]" id="process">
       <div className="max-w-7xl mx-auto">
@@ -38,7 +36,7 @@ export default function ProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={step.number} className="relative">
               <div className="text-6xl font-light text-white/10 mb-4">{step.number}</div>
               <h3 className="text-2xl font-medium text-white mb-3">{step.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed">{step.description}</p>
