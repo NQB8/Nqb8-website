@@ -93,6 +93,53 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NQB8",
+  url: "https://nqb8.tech",
+  logo: "https://nqb8.tech/images/nqb8-icon-logo.png",
+  description:
+    "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
+  email: "hello@nqb8.tech",
+  foundingDate: "2025",
+  sameAs: [],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@nqb8.tech",
+    contactType: "sales",
+  },
+  offers: {
+    "@type": "Offer",
+    itemOffered: [
+      {
+        "@type": "Service",
+        name: "Custom Development",
+        description:
+          "SaaS platforms, admin dashboards, internal tools, and marketing websites.",
+      },
+      {
+        "@type": "Service",
+        name: "UI/UX Design",
+        description:
+          "Wireframes, prototypes, and polished interfaces designed around your users' needs.",
+      },
+      {
+        "@type": "Service",
+        name: "Product Strategy",
+        description:
+          "MVP planning, feature prioritization, and roadmapping.",
+      },
+      {
+        "@type": "Service",
+        name: "Brand Experience",
+        description:
+          "Websites and digital branding that communicate who you are clearly.",
+      },
+    ],
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -102,6 +149,10 @@ export default function RootLayout({
     <html lang="en" style={{ colorScheme: "dark" }}>
       <head>
         <meta name="theme-color" content="#0a0a0a" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <style>{`
 html {
   font-family: ${figtree.style.fontFamily};
