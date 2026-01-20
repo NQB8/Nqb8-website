@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Solutions. All rights reserved.</p>
+          <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Services. All rights reserved.</p>
           <div className="flex gap-6 text-xs">
             <a href="/privacy" className="text-white/60 hover:text-white transition-colors">
               Privacy Policy
