@@ -49,21 +49,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-medium mb-4">Connect</h4>
+            <h4 className="text-white font-medium mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#portfolio" className="text-white/60 hover:text-white transition-colors">
-                  Sample Work
+                  Featured Work
                 </a>
               </li>
               <li>
                 <a href="#process" className="text-white/60 hover:text-white transition-colors">
-                  Our Process
+                  How We Work
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/60 hover:text-white transition-colors">
-                  Get in Touch
+                <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="text-white/60 hover:text-white transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Services</p>
+          <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Solutions. All rights reserved.</p>
           <div className="flex gap-6 text-xs">
             <a href="/privacy" className="text-white/60 hover:text-white transition-colors">
               Privacy Policy
