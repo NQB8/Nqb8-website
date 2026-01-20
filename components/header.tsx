@@ -78,7 +78,7 @@ export default function Header() {
         {/* Desktop CTA Button */}
         <a
           href="mailto:hello@nqb8.tech?subject=Project%20Inquiry"
-          className="hidden md:flex px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 items-center"
+          className="hidden md:flex px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer min-h-[44px] items-center"
         >
           Get in Touch
         </a>

@@ -31,10 +31,10 @@ export default function HeroContent() {
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
-            <a href="#portfolio" className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+            <a href="#portfolio" className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
               View Our Work
             </a>
-            <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="px-8 py-3 rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+            <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
               Get in Touch
             </a>
           </div>
