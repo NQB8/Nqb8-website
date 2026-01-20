@@ -27,8 +27,70 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "NQB8 - Software Development for Growing Businesses",
-  description: "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
+  metadataBase: new URL("https://nqb8.tech"),
+  title: {
+    default: "NQB8 - Software Development for Growing Businesses",
+    template: "%s | NQB8",
+  },
+  description:
+    "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
+  keywords: [
+    "software development",
+    "web development",
+    "startup",
+    "SME",
+    "SaaS",
+    "custom software",
+    "React",
+    "Next.js",
+    "UI/UX design",
+    "product strategy",
+  ],
+  authors: [{ name: "NQB8", url: "https://nqb8.tech" }],
+  creator: "NQB8",
+  publisher: "NQB8",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://nqb8.tech",
+    siteName: "NQB8",
+    title: "NQB8 - Software Development for Growing Businesses",
+    description:
+      "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
+    images: [
+      {
+        url: "/images/nqb8-icon-logo.png",
+        width: 512,
+        height: 512,
+        alt: "NQB8 Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NQB8 - Software Development for Growing Businesses",
+    description:
+      "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
+    images: ["/images/nqb8-icon-logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 }
 
 export default function RootLayout({
