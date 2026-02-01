@@ -1,9 +1,4 @@
-"use client"
-
-import Code2 from "lucide-react/dist/esm/icons/code-2"
-import Palette from "lucide-react/dist/esm/icons/palette"
-import Rocket from "lucide-react/dist/esm/icons/rocket"
-import Sparkles from "lucide-react/dist/esm/icons/sparkles"
+import { Code2, Palette, Rocket, Sparkles } from "lucide-react";
 
 const services = [
   {
@@ -28,9 +23,11 @@ const services = [
   },
 ]
 
-export default function ServicesSection() {
+export default async function ServicesSection() {
+  "use cache"
+
   return (
-    <section className="relative z-20 py-24 px-8 bg-[#0a0a0a]" id="services">
+    <section className="relative z-20 py-24 px-8 bg-[#0a0a0a] scroll-mt-24" id="services">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
@@ -45,7 +42,7 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors duration-300"
             >
               <div className="text-white/80 mb-4 group-hover:text-white transition-colors">
                 <service.Icon className="w-8 h-8" aria-hidden="true" />
