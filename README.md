@@ -1,13 +1,23 @@
 # NQB8
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ubergonmxs-projects/v0-shaders-hero-section)
+## About
+NQB8 is a two-person software studio focused on shipping modern, reliable web products for founders and growing teams. This site is our public home for showcasing what we build and how we work.
 
-## Overview
+## What this repo contains
+- Marketing site for NQB8
+- Our services, process, and featured work
+- Legal pages for privacy and terms
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Tech stack
+- Next.js (App Router)
+- React + TypeScript
+- Tailwind CSS
 
-## Misc
-AI helpers
-- `curl -fsSL https://rams.ai/install | bash`
-- `npx add-skill vercel-labs/agent-skills`
+## Run locally
+```bash
+bun install
+bun run dev
+```
+
+## Contact
+For project inquiries, email `hello@nqb8.tech`.
