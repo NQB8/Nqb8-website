@@ -59,10 +59,10 @@ export const metadata: Metadata = {
       "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
     images: [
       {
-        url: "/images/nqb8-icon-logo.png",
-        width: 512,
-        height: 512,
-        alt: "NQB8 Logo",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NQB8 - Shipping Modern, Reliable Web Products",
       },
     ],
   },
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "NQB8 - Software Development for Growing Businesses",
     description:
       "We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and convert users into customers.",
-    images: ["/images/nqb8-icon-logo.png"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
