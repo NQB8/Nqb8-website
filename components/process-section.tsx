@@ -21,9 +21,11 @@ const steps = [
   },
 ]
 
-export default function ProcessSection() {
+export default async function ProcessSection() {
+  "use cache"
+
   return (
-    <section className="relative z-20 py-24 px-8 bg-linear-to-b from-[#0a0a0a] to-[#0f0f0f]" id="process">
+    <section className="relative z-20 py-24 px-8 bg-linear-to-b from-[#0a0a0a] to-[#0f0f0f] scroll-mt-24" id="process">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">

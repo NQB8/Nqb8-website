@@ -1,6 +1,6 @@
-"use client"
+export default async function HeroContent() {
+  "use cache"
 
-export default function HeroContent() {
   return (
     <section className="relative z-20 min-h-screen flex items-center px-8 pt-24 pb-32">
       <div className="max-w-7xl mx-auto w-full">
@@ -22,7 +22,7 @@ export default function HeroContent() {
           </h1>
 
           <p className="text-base font-light text-white/70 mb-4 leading-relaxed max-w-xl">
-            We build fast, reliable web apps for startups and SMEs—designed to launch quickly, scale smoothly, and
+            We build fast, reliable web apps for startups and SMEs&mdash;designed to launch quickly, scale smoothly, and
             convert users into customers.
           </p>
 
@@ -31,10 +31,16 @@ export default function HeroContent() {
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
-            <a href="#portfolio" className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+            <a
+              href="#portfolio"
+              className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-transparent border border-white/30 text-white font-normal text-sm transition-colors duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer"
+            >
               View Our Work
             </a>
-            <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-white text-black font-normal text-sm transition-all duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer">
+            <a
+              href="mailto:hello@nqb8.tech?subject=Project%20Inquiry"
+              className="px-8 py-3 min-h-[44px] inline-flex items-center rounded-full bg-white text-black font-normal text-sm transition-colors duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer"
+            >
               Get in Touch
             </a>
           </div>

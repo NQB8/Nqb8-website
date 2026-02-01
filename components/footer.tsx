@@ -1,4 +1,4 @@
-"use client"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -7,7 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/images/nqb8-icon-logo.png" alt="NQB8 logo" width={32} height={32} className="h-8 w-auto" />
+              <Image
+                src="/images/nqb8-icon-logo.png"
+                alt="NQB8 logo"
+                width={32}
+                height={32}
+                className="h-8 w-auto"
+                sizes="32px"
+              />
               <span className="text-white font-medium text-lg">NQB8</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-md mb-4">
@@ -16,7 +23,10 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-2 text-sm">
               <span className="text-white/40">Founded 2025</span>
-              <a href="mailto:hello@nqb8.tech" className="text-white/60 hover:text-white transition-colors">
+              <a
+                href="mailto:hello@nqb8.tech"
+                className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              >
                 hello@nqb8.tech
               </a>
             </div>
@@ -26,22 +36,34 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#services" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   Custom Development
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   UI/UX Design
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   Product Strategy
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   Brand Experience
                 </a>
               </li>
@@ -52,17 +74,26 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#portfolio" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#portfolio"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   Featured Work
                 </a>
               </li>
               <li>
-                <a href="#process" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#process"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   How We Work
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@nqb8.tech?subject=Project%20Inquiry" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="mailto:hello@nqb8.tech?subject=Project%20Inquiry"
+                  className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
                   Contact Us
                 </a>
               </li>
@@ -73,10 +104,16 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-xs">© 2025 NQB8 Software Development Services. All rights reserved.</p>
           <div className="flex gap-6 text-xs">
-            <a href="/privacy" className="text-white/60 hover:text-white transition-colors">
+            <a
+              href="/privacy"
+              className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
               Privacy Policy
             </a>
-            <a href="/terms" className="text-white/60 hover:text-white transition-colors">
+            <a
+              href="/terms"
+              className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
               Terms of Service
             </a>
           </div>

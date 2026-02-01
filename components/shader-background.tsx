@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react"
 type TweakpaneInstance = any
 
 import { MeshGradient } from "@paper-design/shaders-react"
+import Image from "next/image"
 
 interface ShaderBackgroundProps {
   children: React.ReactNode
@@ -207,7 +208,15 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="/images/nqb8-icon-logo.png" alt="" width={384} height={384} className="h-96 w-auto opacity-10 mix-blend-screen" />
+        <Image
+          src="/images/nqb8-icon-logo.png"
+          alt=""
+          aria-hidden="true"
+          width={384}
+          height={384}
+          className="h-96 w-auto opacity-10 mix-blend-screen"
+          sizes="384px"
+        />
       </div>
 
       {children}
