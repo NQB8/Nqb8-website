@@ -9,14 +9,29 @@ NQB8 is a two-person software studio focused on shipping modern, reliable web pr
 - Legal pages for privacy and terms
 
 ## Tech stack
-- Next.js (App Router)
-- React + TypeScript
-- Tailwind CSS
+- Next.js 16 (App Router, Cache Components)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Deployed on Cloudflare Workers via [OpenNext](https://opennext.js.org/cloudflare)
 
 ## Run locally
 ```bash
 bun install
 bun run dev
+```
+
+## Deploy
+```bash
+# Create the R2 cache bucket (first time only)
+bunx wrangler r2 bucket create cache
+
+# Build and deploy to Cloudflare Workers
+bun run deploy
+```
+
+## Preview (local Cloudflare Workers)
+```bash
+bun run preview
 ```
 
 ## Contact
