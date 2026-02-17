@@ -22,10 +22,6 @@ bun run dev
 
 ## Deploy
 ```bash
-# Create the R2 cache bucket (first time only)
-bunx wrangler r2 bucket create cache
-
-# Build and deploy to Cloudflare Workers
 bun run deploy
 ```
 
